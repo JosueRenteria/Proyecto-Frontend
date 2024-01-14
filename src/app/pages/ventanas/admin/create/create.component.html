@@ -1,0 +1,65 @@
+<app-nav></app-nav>
+
+<section class="inicial">
+    <div>
+        <h2 class="my-5 display-3 fw-bold ls-tight">
+            Registrar un nuevo Usuario <br/>
+        </h2>
+    </div>
+
+    <form [formGroup]="formulario">
+        <div class="row pading">
+            <div class="col-md-4 col-12">
+                <label for="nombre">Nombre</label>
+                <input type="text" class="form-control" id="nombre" formControlName="nombre">
+
+                <!-- Validaciones para el nombre -->
+                <div *ngIf="nombre?.invalid && (nombre?.dirty || nombre?.touched)" class="text-danger">
+                    <div *ngIf="nombre?.errors?.['required']">
+                        Nombre requerido.
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-12">
+                <label for="apellidoMaterno">Apellido Materno</label>
+                <input type="text" class="form-control" id="apellidoMaterno" formControlName="apellidoMaterno">
+
+                <!-- Validaciones para el apellido materno -->
+                <div *ngIf="apellidoMaterno?.invalid && (apellidoMaterno?.dirty || apellidoMaterno?.touched)" class="text-danger">
+                    <div *ngIf="apellidoMaterno?.errors?.['required']">
+                        Apellido Materno requerido.
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-12">
+                <label for="apellidoPaterno">Apellido Paterno</label>
+                <input type="text" class="form-control" id="apellidoPaterno" formControlName="apellidoPaterno">
+
+                <!-- Validaciones para el apellido paterno -->
+                <div *ngIf="apellidoPaterno?.invalid && (apellidoPaterno?.dirty || apellidoPaterno?.touched)" class="text-danger">
+                    <div *ngIf="apellidoPaterno?.errors?.['required']">
+                        Apellido Paterno requerido.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group pading">
+            <label for="fechaNacimiento">Fecha de Nacimiento</label>
+            <input type="date" class="form-control" id="fechaNacimiento" formControlName="fechaNacimiento" aria-describedby="fechaNacimientoHelp">
+
+            <!-- Validaciones para la fecha de nacimiento -->
+            <div *ngIf="fechaNacimiento?.invalid && (fechaNacimiento?.dirty || fechaNacimiento?.touched)" class="text-danger">
+                <div *ngIf="fechaNacimiento?.errors?.['required']">
+                    Fecha de Nacimiento requerida.
+                </div>
+            </div>
+        </div>
+
+        <div class="pading text-center boton">
+            <button style="width: 40%;" type="button" class="btn btn-primary btn-block mb-4" (click)="confirmarRegistro()">Registrar</button>
+        </div>
+    </form>
+</section>

@@ -1,0 +1,183 @@
+<app-nav></app-nav>
+
+<section class="inicial">
+    <div>
+        <h2 class="my-5 display-3 fw-bold ls-tight">
+            Datos del Paciente <br/>
+        </h2>
+    </div>
+    <!--[formGroup]="formulario"-->
+    <form [formGroup]="form">
+        <div class="row pading">
+            <div class="col-md-4 col-12">
+                <label for="nombre">Nombre</label>
+                <input type="text" class="form-control" id="nombre" formControlName="nombre">
+            </div>
+
+            <div class="col-md-4 col-12">
+                <label for="apellidoMaterno">Apellido Materno</label>
+                <input type="text" class="form-control" id="apellidoMaterno" formControlName="apellidoMaterno">
+            </div>
+
+            <div class="col-md-4 col-12">
+                <label for="apellidoPaterno">Apellido Paterno</label>
+                <input type="text" class="form-control" id="apellidoPaterno" formControlName="apellidoPaterno">
+            </div>
+        </div>
+
+        <div class="form-group pading">
+            <label for="fechaNacimiento">Fecha de Nacimiento</label>
+            <input type="date" class="form-control" id="fechaNacimiento" formControlName="fechaNacimiento" aria-describedby="fechaNacimientoHelp">
+        </div>
+
+        <div class="row pading">
+            <div class="col-md-4 col-12">
+                <label for="genero">Género</label>
+                <input type="text" class="form-control" id="genero" formControlName="genero">
+            </div>
+
+            <div class="col-md-4 col-12">
+                <label for="direccion">Dirección</label>
+                <input type="text" class="form-control" id="direccion" formControlName="direccion">
+            </div>
+
+            <div class="col-md-4 col-12">
+                <label for="telefono">Teléfono</label>
+                <input type="text" class="form-control" id="telefono" formControlName="telefono">
+            </div>
+        </div>
+
+        <div class="form-group pading">
+            <label for="correo">Correo</label>
+            <input type="text" class="form-control" id="correo" formControlName="correo">
+        </div>
+
+        <div>
+            <h2 class="my-5 display-3 fw-bold ls-tight">
+                Datos Medicos del Paciente <br/>
+            </h2>
+        </div>
+
+        <!--Campos para despues del paciente-->
+
+        <div class="row pading">
+            <div class="col-md-4 col-12">
+                <label for="fecha">Fecha:</label>
+                <input type="date" class="form-control" id="fecha" formControlName="fecha" aria-describedby="fecha">
+            </div>
+
+            <div class="col-md-4 col-12">
+                <label for="peso">Peso:</label>
+                <input type="text" class="form-control" id="peso" formControlName="peso">
+            </div>
+
+            <div class="col-md-4 col-12">
+                <label for="altura">Altura:</label>
+                <input type="text" class="form-control" id="altura" formControlName="altura">
+            </div>
+        </div>
+
+        <div class="row pading">
+            <div class="col-md-4 col-12">
+                <label for="alergiasMedicamentos">Alergias a medicamentos:</label>
+                <input type="text" class="form-control" id="alergiasMedicamentos" formControlName="alergiasMedicamentos">
+            </div>
+
+            <div class="col-md-4 col-12">
+                <label for="medicamentosActuales">Medicamentos Actuales:</label>
+                <input type="text" class="form-control" id="medicamentosActuales" formControlName="medicamentosActuales">
+            </div>
+
+            <div class="col-md-4 col-12">
+                <label for="fuma">¿Fuma?:</label>
+                <input type="text" class="form-control" id="fuma" formControlName="fuma">
+            </div>
+        </div>
+
+        <div class="row pading">
+            <div class="col-md-4 col-12">
+                <label for="alcohol">¿Consume alcohol?:</label>
+                <input type="text" class="form-control" id="alcohol" formControlName="alcohol">
+            </div>
+
+            <div class="col-md-4 col-12">
+                <label for="vacunaNeumonia">¿Vacuna de Neumonía?:</label>
+                <input type="text" class="form-control" id="vacunaNeumonia" formControlName="vacunaNeumonia">
+            </div>
+
+            <div class="col-md-4 col-12">
+                <label for="fechaUltimaDosis">Fecha última dosis:</label>
+                <input type="date" class="form-control" id="fechaUltimaDosis" formControlName="fechaUltimaDosis">
+            </div>
+        </div>
+
+        <div class="row pading">
+            <div class="col-md-4 col-12">
+                <label for="sintomasPrincipales">Síntomas Principales:</label>
+                <input type="text" class="form-control" id="sintomasPrincipales" formControlName="sintomasPrincipales">
+            </div>
+
+            <div class="col-md-4 col-12">
+                <label for="tiempoSintomas">Tiempo de Síntomas:</label>
+                <input type="text" class="form-control" id="tiempoSintomas" formControlName="tiempoSintomas">
+            </div>
+
+            <div class="col-md-4 col-12">
+                <label for="contactoInfeccionRespiratoria">Contacto con infección respiratoria:</label>
+                <input type="text" class="form-control" id="contactoInfeccionRespiratoria" formControlName="contactoInfeccionRespiratoria">
+            </div>
+        </div>
+
+        <div class="row pading">
+            <div class="col-md-4 col-12">
+                <label for="viajeAreasBrotes">Viaje a áreas con brotes:</label>
+                <input type="text" class="form-control" id="viajeAreasBrotes" formControlName="viajeAreasBrotes">
+            </div>
+
+            <div class="col-md-4 col-12">
+                <label for="antecedentesRespiratorios">Antecedentes respiratorios:</label>
+                <input type="text" class="form-control" id="antecedentesRespiratorios" formControlName="antecedentesRespiratorios">
+            </div>
+
+            <div class="col-md-4 col-12">
+                <label for="problemasSalud">Problemas de salud:</label>
+                <input type="text" class="form-control" id="problemasSalud" formControlName="problemasSalud">
+            </div>
+        </div>
+
+        <div class="row pading">
+            <div class="col-md-4 col-12">
+                <label for="sudoracionNocturna">Sudoración nocturna:</label>
+                <input type="text" class="form-control" id="sudoracionNocturna" formControlName="sudoracionNocturna">
+            </div>
+
+            <div class="col-md-4 col-12">
+                <label for="perdidaApetito">Pérdida de apetito:</label>
+                <input type="text" class="form-control" id="perdidaApetito" formControlName="perdidaApetito">
+            </div>
+
+            <div class="col-md-4 col-12">
+                <label for="infeccionRespiratoriaReciente">Infección respiratoria reciente:</label>
+                <input type="text" class="form-control" id="infeccionRespiratoriaReciente" formControlName="infeccionRespiratoriaReciente">
+            </div>
+        </div>
+
+        <div class="row pading">
+            <div class="col-md-4 col-12">
+                <label for="medicamentosActualidad">Medicamentos en actualidad:</label>
+                <input type="text" class="form-control" id="medicamentosActualidad" formControlName="medicamentosActualidad">
+            </div>
+
+            <div class="col-md-4 col-12">
+                <label for="preguntasAdicionales">Preguntas Adicionales:</label>
+                <input type="text" class="form-control" id="preguntasAdicionales" formControlName="preguntasAdicionales">
+            </div>
+
+            <!-- Agrega más campos según sea necesario -->
+        </div>
+
+        <div class="pading text-center boton">
+            <button style="width: 40%;" type="button" class="btn btn-primary btn-block mb-4" (click)="confirmarDatos()">Registrar</button>
+        </div>
+    </form>
+</section>

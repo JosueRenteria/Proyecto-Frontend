@@ -1,0 +1,22 @@
+nav {
+    background-color: #303030;
+    color: white;
+}
+
+a {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a:hover {
+    color: #D905B7;
+}
+
+img {
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}

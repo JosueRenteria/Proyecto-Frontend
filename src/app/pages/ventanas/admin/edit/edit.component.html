@@ -1,0 +1,66 @@
+<app-nav></app-nav>
+
+<section class="inicial">
+    <div>
+        <h2 class="my-5 display-3 fw-bold ls-tight">
+            Actualizar los Datos de {{adminData?.nombre}} <br/>
+        </h2>
+    </div>
+
+    <form [formGroup]="formulario">
+        <div class="row pading">
+            <div class="col-md-4 col-12">
+                <label for="nombre">Nombre</label>
+                <input type="text" class="form-control" id="nombre" formControlName="nombre">
+
+                <!--Validaciones para la contraseña-->
+                <div *ngIf="nombre && nombre.invalid && (nombre.dirty || nombre.touched)" class="text-danger">
+                    <div *ngIf="nombre.errors?.['required']">
+                        Nombre requerido.
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-12">
+                <label for="apellidoMaterno">Apellido Materno</label>
+                <input type="text" class="form-control" id="apellidoMaterno" formControlName="apellidoMaterno">
+
+                <!--Validaciones para la contraseña-->
+                <div *ngIf="apellidoMaterno && apellidoMaterno.invalid && (apellidoMaterno.dirty || apellidoMaterno.touched)" class="text-danger">
+                    <div *ngIf="apellidoMaterno.errors?.['required']">
+                        Apellido Materno requerido.
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-12">
+                <label for="apellidoPaterno">Apellido Paterno</label>
+                <input type="text" class="form-control" id="apellidoPaterno" formControlName="apellidoPaterno">
+
+                <!--Validaciones para la contraseña-->
+                <div *ngIf="apellidoPaterno && apellidoPaterno.invalid && (apellidoPaterno.dirty || apellidoPaterno.touched)" class="text-danger">
+                    <div *ngIf="apellidoPaterno.errors?.['required']">
+                        Apellido Paterno requerido.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group pading">
+            <label for="fechaNacimiento">Fecha de Nacimiento</label>
+            <input type="date" class="form-control" id="fechaNacimiento" formControlName="fechaNacimiento" aria-describedby="fechaNacimientoHelp">
+
+            <!--Validaciones para la contraseña-->
+            <div *ngIf="fechaNacimiento && fechaNacimiento.invalid && (fechaNacimiento.dirty || fechaNacimiento.touched)" class="text-danger">
+                <div *ngIf="fechaNacimiento.errors?.['required']">
+                    Fecha de Nacimiento requerido.
+                </div>
+            </div>
+        </div>
+
+        <div class="pading text-center boton">
+            <button style="width: 40%;" type="button" class="btn btn-primary btn-block mb-4" (click)="confirmarActualizacion()">Actualizar</button>
+        </div>
+    </form>
+
+</section>

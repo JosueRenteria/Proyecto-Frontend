@@ -1,0 +1,24 @@
+.inicial {
+    background-color: hsl(0, 0%, 96%);
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+h2 {
+    text-align: center;
+}
+
+.pading {
+    padding-top: 20px;
+}
+
+form {
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
+.boton {
+    padding-top: 5%;
+}

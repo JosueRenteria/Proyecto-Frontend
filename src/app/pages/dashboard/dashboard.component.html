@@ -1,0 +1,17 @@
+<app-nav></app-nav>
+
+
+<section *ngIf="!userLoginOn">
+    <app-home></app-home>
+</section>
+
+<section *ngIf="userLoginOn">
+    <section *ngIf="adminLoginOn == true">
+        <app-admin></app-admin>
+    </section>
+
+    <section *ngIf="adminLoginOn == false">
+        <app-users></app-users>
+    </section>
+
+</section>

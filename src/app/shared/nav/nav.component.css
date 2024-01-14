@@ -1,0 +1,15 @@
+nav {
+    background-color: #3b3b3b !important;
+    color: white;
+}
+
+a {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a:hover {
+    color: #D905B7;
+}

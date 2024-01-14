@@ -1,0 +1,14 @@
+.final {
+    background-color: #303030;
+    color: white;
+}
+
+.inicio {
+    background-color: #3b3b3b;
+}
+
+.mb-4 {
+    margin: 0 !important;
+    padding-bottom: 1em;
+    padding-top: 1em;
+}

@@ -1,0 +1,108 @@
+<section>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/create-user" style="display: flex; align-items: end;">Agregar un nuevo Historial Clinico</a>
+            </li>
+        </ul>
+    </nav>
+</section>
+
+<section class="inicial">
+    <div>
+        <h2 class="my-5 display-3 fw-bold ls-tight">
+            Lista de Historiales Clinicos <br />
+            <span class="text-primary">{{ this.name }}</span>
+        </h2>
+    </div>
+
+    <div class="inicial" *ngFor="let historial of historiales">
+        <div class="row g-0">
+            <div class="col-md-4 gradient-custom text-center text-white" style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp" alt="Avatar" class="img-fluid my-5" style="width: 100px;" />
+                <h5>{{ historial.paciente.nombre }} {{ historial.paciente.apellidoPaterno }} {{ historial.paciente.apellidoMaterno }}</h5>
+                <h6 style="padding-left: 2%; padding-right: 2%;">{{ historial.paciente.direccion }}, {{ historial.paciente.correo }}, {{ historial.paciente.telefono }}</h6>
+                <p style="padding-left: 2%; padding-right: 2%;">{{ historial.paciente.fechaNacimiento }} - {{ historial.paciente.genero }}</p>
+            </div>
+
+            <div class="col-md-8" style="background-color: antiquewhite;">
+                <div class="card-body p-4">
+                    <h6>Información</h6>
+                    <hr class="mt-0 mb-4">
+                    <div class="row pt-1 d-flex align-items-center">
+                        <div class="col-md-2 col-12">
+                            <h6>Peso</h6>
+                            <p class="text-muted">{{historial.peso}}Kg</p>
+                        </div>
+
+                        <div class="col-md-2 col-12">
+                            <h6>Altura</h6>
+                            <p class="text-muted">{{historial.altura}}cm</p>
+                        </div>
+
+                        <div class="col-md-2 col-12">
+                            <h6>Alegias</h6>
+                            <p class="text-muted">{{historial.alergiasMedicamentos}}</p>
+                        </div>
+
+                        <div class="col-md-2 col-12">
+                            <h6>Medicamentos</h6>
+                            <p class="text-muted">{{historial.medicamentosActuales}}</p>
+                        </div>
+
+                        <div class="col-md-2 col-12">
+                            <h6>Fumar</h6>
+                            <p class="text-muted">{{historial.fuma}}</p>
+                        </div>
+
+                        <div class="col-md-2 col-12">
+                            <h6>Tomar</h6>
+                            <p class="text-muted">{{historial.alcohol}}</p>
+                        </div>
+                    </div>
+
+                    <h6>Sintomas</h6>
+
+                    <hr class="mt-0 mb-4">
+
+                    <div class="row pt-1">
+                        <div class="col-md-3 col-12">
+                            <h6>Sintomas</h6>
+                            <p class="text-muted">{{historial.sintomasPrincipales}}</p>
+                        </div>
+
+                        <div class="col-md-3 col-12">
+                            <h6>Tiempo de Sintomas</h6>
+                            <p class="text-muted">{{historial.tiempoSintomas}}</p>
+                        </div>
+
+                        <div class="col-md-3 col-12">
+                            <h6>Respiratoria</h6>
+                            <p class="text-muted">{{historial.contactoInfeccionRespiratoria}}</p>
+                        </div>
+
+                        <div class="col-md-3 col-12">
+                            <h6>Problemas de Salud</h6>
+                            <p class="text-muted">{{historial.problemasSalud}}</p>
+                        </div>
+
+                        <div class="col-md-3 col-12">
+                            <h6>Medicamentos Actuales</h6>
+                            <p class="text-muted">{{historial.problemasSalud}}</p>
+                        </div>
+                    </div>
+
+                    <hr class="mt-0 mb-4">
+
+                    <div class="d-flex justify-content-center mb-2">
+                        <button type="button" class="btn btn-outline-primary ms-1 btn-eliminar" (click)="eliminarHistorial(historial)">Eliminar</button>
+
+                        <button type="button" class="btn btn-outline-primary ms-1" (click)="descargarHistorial(historial)">Descargar Historial</button>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

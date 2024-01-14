@@ -1,0 +1,15 @@
+.principal {
+    background-image: url('../../../assets/1.jpeg');
+    background-size: cover;
+    /* Hace que la imagen cubra todo el div */
+    background-position: center;
+    /* Centra la imagen */
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mask {
+    padding: 30px;
+}

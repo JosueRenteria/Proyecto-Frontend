@@ -1,0 +1,38 @@
+<section>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/create-admin" style="display: flex; align-items: end;">Agregar un nuevo Usuario</a>
+            </li>
+        </ul>
+    </nav>
+</section>
+
+
+<section class="inicial">
+    <div>
+        <h2 class="my-5 display-3 fw-bold ls-tight">
+            Bienvenido al apartado de Administración <br />
+            <span class="text-primary">{{ this.name }}</span>
+        </h2>
+    </div>
+
+    <div class="row cartas">
+        <div class="col-lg-4" *ngFor="let admin of admins">
+            <!--Tarjetas de Usuarios-->
+            <div class="card mb-4">
+                <div class="card-body text-center">
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar" class="rounded-circle img-fluid" style="width: 150px;">
+                    <h5 class="my-3">{{ admin.nombre }} {{ admin.usuario.esAdmin ? '(Administrador)' : '' }}</h5>
+                    <p class="text-muted mb-1">{{ admin.apellidoMaterno}} {{ admin.apellidoPaterno}}</p>
+                    <p class="text-muted mb-1">{{ admin.usuario.correo }}</p>
+                    <p class="text-muted mb-1">{{admin.fechaNacimiento}}</p>
+                    <div class="d-flex justify-content-center mb-2">
+                        <button type="button" class="btn btn-outline-primary ms-1 btn-eliminar" (click)="eliminarAdmin(admin)">Eliminar</button>
+                        <button type="button" class="btn btn-outline-primary ms-1" (click)="editarAdmin(admin)">Actualizar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
